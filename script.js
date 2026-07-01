@@ -399,7 +399,6 @@ function renderResultView(data, isShared = false) {
 
   renderBars(axisEntries);
   updateLinks();
-loadSharedResultFromUrl();
   show("result-screen");
 }
 
