@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="나는 창업형 인간일까, 직장형 인간일까? 내 안의 사장님 가능성 테스트" />
+  <meta property="og:title" content="나는 창업형 인간일까, 직장형 인간일까?" />
+  <meta property="og:description" content="15가지 질문으로 알아보는 내 안의 사장님 가능성 테스트" />
+  <meta property="og:type" content="website" />
+  <title>나는 창업형 인간일까, 직장형 인간일까?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="start-screen" class="screen start-screen active" aria-labelledby="main-title">
+      <a class="home-link" href="https://nojaky.github.io/">←홈으로</a><br><br>
+      <div class="hero-badge">SELF BUSINESS TYPE TEST</div>
+      <h1 id="main-title">나는 창업형 인간일까,<br />직장형 인간일까?</h1>
+      <p class="subtitle">내 안의 사장님 가능성 테스트</p>
+      <p class="intro">
+        15가지 상황 질문으로 현실 감각, 실행력, 멘탈 내구도, 반복 운영력, 시스템화 능력을 분석합니다.
+        결과는 재미와 자기점검을 위한 참고용입니다.
+      </p>
+      <div class="start-card">
+        <div class="mini-stat">
+          <strong>15</strong>
+          <span>문항</span>
+        </div>
+        <div class="mini-stat">
+          <strong>5</strong>
+          <span>분석 축</span>
+        </div>
+        <div class="mini-stat">
+          <strong>6</strong>
+          <span>결과 유형</span>
+        </div>
+      </div>
+      <button id="start-btn" class="primary-btn">테스트 시작하기</button>
+    </section>
+
+    <section id="quiz-screen" class="screen quiz-screen" aria-live="polite">
+      <div class="topbar">
+        <button id="back-btn" class="ghost-btn" type="button">이전</button>
+        <div class="progress-wrap" aria-label="진행률">
+          <div class="progress-meta">
+            <span id="question-count">1 / 15</span>
+            <strong id="progress-percent">0%</strong>
+          </div>
+          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        </div>
+      </div>
+
+      <article class="question-card">
+        <span id="axis-label" class="axis-label">현실 감각</span>
+        <h2 id="question-title">질문</h2>
+        <div id="answer-list" class="answer-list"></div>
+      </article>
+    </section>
+
+    <section id="result-screen" class="screen result-screen">
+      <div class="result-header">
+        <span class="result-kicker">당신의 결과</span>
+        <h2 id="result-title">결과 유형</h2>
+        <p id="result-summary" class="result-summary"></p>
+      </div>
+
+      <div class="score-card">
+        <div class="score-ring" aria-label="창업 성향 점수">
+          <svg viewBox="0 0 120 120" role="img">
+            <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="score-ring-value" class="ring-value" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ring-text">
+            <strong id="total-score">0%</strong>
+            <span>창업 성향 점수</span>
+          </div>
+        </div>
+        <div class="score-copy">
+          <p id="result-description"></p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <h3>5개 성향 분석</h3>
+          <span id="top-axis-label">강점 분석</span>
+        </div>
+        <div id="bar-chart" class="bar-chart"></div>
+      </div>
+
+      <div class="advice-grid">
+        <div class="advice-card">
+          <h3>강점</h3>
+          <p id="result-strength"></p>
+        </div>
+        <div class="advice-card warning">
+          <h3>주의할 점</h3>
+          <p id="result-caution"></p>
+        </div>
+        <div class="advice-card">
+          <h3>추천 방향</h3>
+          <p id="result-recommend"></p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>성향을 확인했다면, 이제 숫자로 현실을 확인해보세요.</p>
+        <div class="cta-buttons">
+          <a id="survival-link" class="primary-btn" href="#">내 카페는 몇 개월 버틸까?</a>
+          <a id="cost-link" class="secondary-btn" href="#">내 메뉴는 얼마에 팔아야 할까?</a>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="share-btn" class="ghost-btn">결과 공유하기</button>
+        <button id="restart-btn" class="ghost-btn">다시 테스트하기</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© RoasterHyun</span>
+    <span>재미형 성향 테스트</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
